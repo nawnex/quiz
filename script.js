@@ -2956,7 +2956,7 @@ const quizData = [
 
   const loadQuiz = () => {
       deselectAnswers();
-      document.getElementById("check").innerHTML = `<h4>So far you answered ${score}/${quizlen/*quizData.length*/} questions correctly</h4>`
+      document.getElementById("check").innerHTML = `<h4>So far you answered ${score}/${loop/*loop*/} questions correctly</h4>`
       document.getElementById("check2").innerHTML = ''
       if(quizData[arr[loop]].correct.length === 1) limits = 1
       if(quizData[arr[loop]].correct.length === 2) limits = 2
