@@ -2956,7 +2956,7 @@ const quizData = [
 
   const loadQuiz = () => {
       deselectAnswers();
-      if(vehicle === 'undefined') window.location.href = 'index.html'
+      if(typeof vehicle === 'undefined') window.location.href = 'index.html'
       document.getElementById("check").innerHTML = `<h4>So far you answered ${score}/${loop/*loop*/} questions correctly</h4>`
       document.getElementById("check2").innerHTML = ''
       if(quizData[arr[loop]].correct.length === 1) limits = 1
