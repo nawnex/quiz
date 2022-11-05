@@ -10,49 +10,26 @@
 <body>
 
     <div class="quiz-container" id="quiz">
-        <a href="index.html" style="text-decoration:none;"><button id="home" class="button buttonback">Home</button></a>
-        <button id="exit" class="button buttonexit" style="text-decoration:none;" onclick="endearly()">End early</button>
+        <p><b>Twitter @Nawrex</b></p>
         <div class="quiz-header">
-            <h2 id="question">Question Text</h2>
-            <h4 id="mark">Mark Text</h4>
-            <ul>
-                <li>
-                    <input type="checkbox" name="answer" id="a" class="answer" onclick="alimit()">
-                    <label for="a" id="a_text">Answer</label>
-                </li>
-
-                <li>
-                    <input type="checkbox" name="answer" id="b" class="answer" onclick="blimit()">
-                    <label for="b" id="b_text">Answer</label>
-                </li>
-
-                <li>
-                    <input type="checkbox" name="answer" id="c" class="answer" onclick="climit()">
-                    <label for="c" id="c_text">Answer</label>
-                </li>
-
-                <li>
-                    <input type="checkbox" name="answer" id="d" class="answer" onclick="dlimit()">
-                    <label for="d" id="d_text">Answer</label>
-                </li>
-
-                <li>
-                    <input type="checkbox" name="answer" id="e" class="answer" onclick="elimit()">
-                    <label for="e" id="e_text">Answer</label>
-                </li>
-
-                <li>
-                    <input type="checkbox" name="answer" id="f" class="answer" onclick="flimit()">
-                    <label for="f" id="f_text">Answer</label>
-                </li>
-            </ul>
+            <h2 id="start">Choose a Theory Test:</h2>
         </div>
-        <h4 p style="text-align:center" id="check2"></h4>
-        <p p style="text-align:center" id="check"></p>
-        <button id="submit">Submit</button>
+        <h4 p style="text-align:center">These questions are taken from gibraltar gov pdf at:</h4>
+        <a href="https://www.gibraltar.gov.gi/new/sites/default/files/HMGoG_Documents/Car_%26_Motorcycle_Theory_Test_Question_Bank.pdf" p style="text-align:center" target="_blank" title="https://www.gibraltar.gov.gi/new/sites/default/files/HMGoG_Documents/Car_%26_Motorcycle_Theory_Test_Question_Bank.pdf"><p>Gibraltar Government website's pdf</p></a>
+        <h3 id="para" p style="text-align:center">20 questions</h3>
+        <a href="quiz.html" onclick="vehiclecar()" style="text-decoration:none;"><button id="car">Car</button></a>
+        <a href="quiz.html" onclick="vehiclebike()" style="text-decoration:none;"><button id="bike">MotorBike</button></a>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+    const vehiclecar = () => {
+    vehicle = "car";
+    localStorage["keys"] = vehicle};
+    const vehiclebike = () => {
+    vehicle = "bike";
+    localStorage['keys'] = vehicle;}
+    </script>
+    
 
 </body>
 </html>
