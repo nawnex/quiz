@@ -60,3 +60,11 @@ button:focus{
     outline: none;
     background-color: #44b927;
 }
+.buttonexit {
+    float:right;
+
+}
+.buttonback, .buttonexit {
+    display:inline; 
+    width: 50%;
+}
