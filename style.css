@@ -94,13 +94,13 @@ button:focus{
 	gap: var(--gap);
 }
 /* Anything udner 1024px */
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 560px), screen and (max-height: 850px) {
 	.image-grid {
 		--num-cols: 1;
 		--row-height: 110px;
 	}
     .myImg1, .myImg2, .myImg3, .myImg4 {
-        float:right;
+        float:center;
         display:inline;
         background-size: contain !important;
         height:150px; /* your image height */
@@ -113,6 +113,7 @@ button:focus{
     }
     body {
         overflow: scroll; /* Show scrollbars */
+        height: auto
     }
     /* width */
     ::-webkit-scrollbar {
@@ -131,7 +132,27 @@ button:focus{
     /* Handle on hover */
     ::-webkit-scrollbar-thumb:hover {
     background: #555;
-    } 
+    }
+    .quiz-header{
+        padding: 1rem;
+    }
+    h2{
+        padding: 0.5rem;
+    }
+    ul li{
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
+    }
+    h4{
+        padding: 0.5rem;
+        text-align: center;
+        margin: 0;
+    }
+    button{
+        font-size: 1rem;
+        font-family: inherit;
+        padding: 0.9rem;
+    }
 }
 img {
     float: right;

@@ -3585,8 +3585,9 @@ const loadQuiz = () => {
       var myImg1check = document.getElementsByClassName('myImg1')
       if(myImg1check.length > 0) {
         image_change.classList.remove('image-grid')
-        document.querySelector(".hide").style.display = 'inline';
-        document.querySelector(".hide2").style.display = 'inline';
+        
+        document.querySelector(".hide").style.display = null;
+        document.querySelector(".hide2").style.display = null;
         document.querySelector('.myImg1').style.removeProperty("background");
         document.querySelector('.myImg2').style.removeProperty("background");
         document.querySelector('.myImg3').style.removeProperty("background");
