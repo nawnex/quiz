@@ -3416,6 +3416,7 @@ const quizData = [
   },
 ];
 
+//quiz is mainly derived from https://www.codewithrandom.com/2022/08/03/quiz-app-javascript-quiz-app-source-code-codewithrandom/
 //the list #101 through to #251 was moved to the back to make it easier for each choice
 //image questions are 62 questions and section for both norm questions are 53
 //bike questions are at the beginning and that encompasses 1-153(new 215) and car is 101-305(new 367)
@@ -3576,6 +3577,7 @@ const endearly = () => {
 const loadQuiz = () => {
   broke = 0
     deselectAnswers();
+    if (typeof vehicle === 'undefined') window.location.href = 'index.html'
     if(arr[loop] > 99 && arr[loop] < 106) image = 1 
     if(arr[loop] > 109 && arr[loop] < 169) image = 3
     if(arr[loop] < 100 || arr[loop] > 105 && arr[loop] < 110 || arr[loop] > 162) image = 2
@@ -3594,7 +3596,6 @@ const loadQuiz = () => {
       b_text.classList.remove('myImg2');
       c_text.classList.remove('myImg3');
       d_text.classList.remove('myImg4');}
-    if (typeof vehicle === 'undefined') window.location.href = 'index.html'
     document.getElementById("check").innerHTML = `<h4>So far you answered ${score}/${loop/*loop*/} questions correctly</h4>`
     document.getElementById("check2").innerHTML = ''
     if(quizData[arr[loop]].correct.length === 1) limits = 1
